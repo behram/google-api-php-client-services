@@ -2267,7 +2267,27 @@ class Google_Service_Compute extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'insert' => array(
+            ),'patch' => array(
+                  'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}',
+                  'httpMethod' => 'PATCH',
+                  'parameters' => array(
+                      'project' => array(
+                          'location' => 'path',
+                          'type' => 'string',
+                          'required' => true,
+                      ),
+                      'zone' => array(
+                          'location' => 'path',
+                          'type' => 'string',
+                          'required' => true,
+                      ),
+                      'instanceGroupManager' => array(
+                          'location' => 'path',
+                          'type' => 'string',
+                          'required' => true,
+                      ),
+                  ),
+              ),'insert' => array(
               'path' => '{project}/zones/{zone}/instanceGroupManagers',
               'httpMethod' => 'POST',
               'parameters' => array(

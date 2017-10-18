@@ -220,6 +220,13 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
     $params = array_merge($params, $optParams);
     return $this->call('get', array($params), "Google_Service_Compute_InstanceGroupManager");
   }
+
+    public function patch($project, $zone, $instanceGroupManager, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Compute_InstanceGroupManager");
+    }
   /**
    * Creates a managed instance group using the information that you specify in
    * the request. After the group is created, it schedules an action to create
